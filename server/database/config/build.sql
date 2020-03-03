@@ -1,0 +1,16 @@
+BEGIN;
+
+DROP TABLE IF EXISTS cities ;
+
+CREATE TABLE cities(
+  id SERIAL PRIMARY KEY NOT NULL UNIQUE,
+  name VARCHAR(50) NOT NULL,
+  city VARCHAR(200) NOT NULL
+);
+
+INSERT INTO cities (name, city) VALUES 
+('LEE','TOKYO'),
+('ALI','AMMAN'),
+('CHRIS','LONDON');
+
+COMMIT;
